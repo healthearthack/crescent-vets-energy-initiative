@@ -1,0 +1,35 @@
+{
+  "tld": ".h2o",
+  "authority": "Crescent & Veteran Energy Alliance (CVEA) / Metaknews LLC",
+  "root_gateway": "https://go.thepolka.cloud/telemetry/h2o",
+  "timestamp_utc": "2026-09-20T08:30:00Z",
+  "registered_zones": [
+    {
+      "fqdn": "freshwater.h2o",
+      "purpose": "Geothermal Desalination Clean Drinking Water Telemetry",
+      "annual_yield_gallons": 1277500.0,
+      "distribution_target": "Underserved Agricultural Districts (South Arkansas)",
+      "status": "ONLINE_ACTIVE"
+    },
+    {
+      "fqdn": "desalination.h2o",
+      "purpose": "Thermal Desorption Steam Condensate Purity Monitoring",
+      "condensate_temp_c": 85.0,
+      "total_dissolved_solids_ppm": 12.4,
+      "potability_standard": "WHO_AND_EPA_DRINKING_WATER_GRADE",
+      "status": "PURIFIED_STANDARD"
+    },
+    {
+      "fqdn": "waqf.h2o",
+      "purpose": "Decentralized Islamic Endowment Water Allocation Ledger",
+      "annual_clean_water_fund_usd": 1896000.0,
+      "governance": "SHARIA_COMPLIANT_ZERO_RIBA",
+      "status": "ENDOWED_LOCKED"
+    },
+    {
+      "fqdn": "thepolka.h2o",
+      "purpose": "Edge Telemetry Feed for Public Water Sovereignty HUD",
+      "status": "SYNCHRONIZED"
+    }
+  ]
+}
