@@ -1,0 +1,34 @@
+{
+  "annual_veterans_trained": 45,
+  "average_salary_uplift_usd": 70833.33333333333,
+  "total_annual_community_wealth_generated_usd": 3187500.0,
+  "career_pathways": [
+    {
+      "branch": "US_NAVY",
+      "service_rating": "EM / ETN (Nuclear Electrician's Mate / Electronics Technician)",
+      "target_industrial_role": "Lead Geothermal Turbogenerator & High-Voltage Grid Operator",
+      "median_military_exit_wage_usd": 52000.0,
+      "certified_industrial_wage_usd": 128500.0,
+      "primary_certification": "NERC-CIP / IEEE 1547 Interconnection",
+      "training_bridge_weeks": 8
+    },
+    {
+      "branch": "US_ARMY",
+      "service_rating": "91B / 12P (Wheeled Vehicle Mechanic / Prime Power Production)",
+      "target_industrial_role": "High-Pressure DLE Adsorption Column & ESP Skid Field Technician",
+      "median_military_exit_wage_usd": 46000.0,
+      "certified_industrial_wage_usd": 104000.0,
+      "primary_certification": "API 570 Piping Inspection / OSHA 30",
+      "training_bridge_weeks": 6
+    },
+    {
+      "branch": "US_AIR_FORCE",
+      "service_rating": "1D7X1 / 3E0X2 (Cyber Operations / Electrical Power Production)",
+      "target_industrial_role": "NIST SP 800-82 OT/SCADA Cyber-Physical Security Engineer",
+      "median_military_exit_wage_usd": 58000.0,
+      "certified_industrial_wage_usd": 136000.0,
+      "primary_certification": "ISA/IEC 62443 Cybersecurity Specialist",
+      "training_bridge_weeks": 10
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crescent-vets-energy-initiative"
+version = "2.4.0"
+description = "Social Welfare Platform: Military Veterans Workforce Transition & Islamic Civic Equity Governance"
+readme = "README.md"
+authors = [{ name = "Doctoral Candidate healthearthack", email = "admin@thepolka.cloud" }]
+license = { text = "Apache-2.0" }
+dependencies = [
+    "pandas>=2.0.0"
+]

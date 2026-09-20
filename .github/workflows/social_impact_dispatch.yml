@@ -1,0 +1,47 @@
+name: Compute Social Welfare Metrics & Dispatch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'welfare_engine.py'
+  schedule:
+    - cron: "0 0 1 * *" # Monthly impact audit
+
+jobs:
+  social-welfare-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Welfare Engine
+        run: |
+          python welfare_engine.py
+
+      - name: Commit Updated Welfare Artifacts
+        run: |
+          git config user.name "healthearthack-ci"
+          git config user.email "ci@thepolka.cloud"
+          git add welfare/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(welfare): update veterans and waqf ledger [skip ci]" && git push)
+
+      - name: Dispatch Event to Research Publisher (Repo 5)
+        if: env.CROSS_REPO_PAT != ''
+        uses: peter-evans/repository-dispatch@v3
+        env:
+          CROSS_REPO_PAT: ${{ secrets.CROSS_REPO_PAT }}
+        with:
+          token: ${{ secrets.CROSS_REPO_PAT }}
+          repository: healthearthack/industrial-research-publisher
+          event-type: social_impact_ready
+          client-payload: '{"status": "WELFARE_COMPUTED", "veterans_trained": 45}'
